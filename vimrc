@@ -73,26 +73,6 @@ au! Syntax jade source ~/.vim/bundles/vim-blade/syntax/blade.vim
 " Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-"
-" Sexy Scroller
-"
-" Time it takes (in milliseconds) for buffer to scroll one line or column.
-let g:SexyScroller_ScrollTime  = 5
-
-" Time it takes for  cursor to travel one line.
-" Only visible if  `:set cursorline`.  Set it to 0 to never animate cursor.
-let g:SexyScroller_CursorTime  = 0
-
-" Set the maximum amount of time that longer scrolls can take:
-let g:SexyScroller_MaxTime     = 800
-
-" Choose the easing style (how scrolling accelerates and deccelerates):
-"  - 1 = start fast, finish slowly            (like 2 but less so)
-"  - 2 = start very fast, finish very slowly  (recommended, default)
-"  - 3 = start slowly, get faster, end slowly (sexy)
-"  - 4 = start very slowly, end very slowly   (like 3 but more so)
-"  - ? = constant speed                       (dull)
-let g:SexyScroller_EasingStyle = 2
 
 "
 " Pathogen
