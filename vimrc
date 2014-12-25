@@ -112,13 +112,14 @@ let g:airline#extensions#tabline#right_sep = '⮂'
 let g:airline#extensions#tabline#right_alt_sep = '⮃'
 
 " Set airline symbols
+let g:airline_symbols = {}
 let g:airline_left_sep = '⮀'
 let g:airline_left_alt_sep = '⮁'
 let g:airline_right_sep = '⮂'
 let g:airline_right_alt_sep = '⮃'
-" let g:airline_symbols.branch = '⭠'
-" let g:airline_symbols.readonly = '⭤'
-" let g:airline_symbols.linenr = '⭡'
+let g:airline_symbols.branch = '⭠'
+let g:airline_symbols.readonly = '⭤'
+let g:airline_symbols.linenr = '⭡'
 
 "
 " Tagbar
@@ -228,9 +229,9 @@ hi TabLineFill ctermfg=red   ctermbg=green cterm=none
 
 syntax enable
 if has('gui_running')
-    set background=light
+    set background=dark
 else
-    set background=light
+    set background=dark
 endif
 set t_Co=16
 let g:solarized_termcolors=256
@@ -299,3 +300,7 @@ while c <= 'z'
   let c = nr2char(1+char2nr(c))
 endw
 set timeout ttimeoutlen=50
+
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
