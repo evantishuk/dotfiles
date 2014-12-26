@@ -9,12 +9,6 @@ set undodir=~/.vim/tmp
 " Key Mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Pops up RGB color picker
-nmap <C-b> <Plug>vCoolor
-imap <C-b> <Plug>vCoolorI
-nmap <M-b> <Plug>vCoolorR
-imap <M-b> <Plug>vCoolorRI
-
 " Remap arrow keys because they broke when upgrading to vim 7.3
 " Most people could remove this
 map! [D <Left>
