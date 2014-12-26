@@ -17,8 +17,11 @@ the dotfile symlinks being created in your home directory.
 Installation
 ------------
 
+Since there are a number of submodules plugins, don't forget to include the
+`--recursive` flag.
+
 ``` bash
-git clone https://github.com/evantishuk/dotfiles.git ~/dotfiles
+git clone --recursive https://github.com/evantishuk/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 ./makesymlinks.sh
 ```
