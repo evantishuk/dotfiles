@@ -293,7 +293,3 @@ while c <= 'z'
   let c = nr2char(1+char2nr(c))
 endw
 set timeout ttimeoutlen=50
-
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
