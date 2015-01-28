@@ -26,8 +26,6 @@ inoremap [C <Right>
 inoremap [A <Up>
 inoremap [B <Down>
 
-map + i<Space><ESC>W
-
 " make CTRL-J and CTRL-K navigate between buffers
 map <C-k> :bn<CR>
 map <C-j> :bp<CR>
@@ -73,6 +71,8 @@ au! Syntax jade source ~/.vim/bundles/vim-blade/syntax/blade.vim
 " Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+
+nmap <leader>s <Plug>(wildfire-quick-select)
 
 "
 " Pathogen
