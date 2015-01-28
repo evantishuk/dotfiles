@@ -9,12 +9,6 @@ set undodir=~/.vim/tmp
 " Key Mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Pops up RGB color picker
-nmap <C-b> <Plug>vCoolor
-imap <C-b> <Plug>vCoolorI
-nmap <M-b> <Plug>vCoolorR
-imap <M-b> <Plug>vCoolorRI
-
 " Remap arrow keys because they broke when upgrading to vim 7.3
 " Most people could remove this
 map! [D <Left>
@@ -222,22 +216,21 @@ hi TabLineFill ctermfg=red   ctermbg=green cterm=none
 " Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" set term=screen-256color
-" if $TERM == 'screen'
-"  set term=xterm
-" endif
-
 syntax enable
-if has('gui_running')
-    set background=dark
-else
-    set background=dark
-endif
-set t_Co=16
 let g:solarized_termcolors=256
-colorscheme solarized
-set encoding=utf8
 
+" set solarized color scheme based on time of day (light = day, dark = night)
+let hour = strftime("%H")
+if 6 <= hour && hour < 18
+  set background=light
+else
+  set background=dark
+endif
+
+colorscheme solarized
+
+" set the encoding and language
+set encoding=utf8
 try
     lang en_US
 catch
