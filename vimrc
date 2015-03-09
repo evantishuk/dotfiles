@@ -42,8 +42,8 @@ au! Syntax html source ~/.vim/syntax/html.vim
 au BufRead,BufNewFile *.php,*.php set filetype=php
 au! Syntax php source ~/.vim/syntax/php.vim
 
-au BufRead,BufNewFile *.twig set filetype=twig
-au! Syntax twig source ~/.vim/syntax/twig.vim
+" au BufRead,BufNewFile *.twig set filetype=twig
+" au! Syntax twig source ~/.vim/syntax/twig.vim
 
 au BufRead,BufNewFile *.sass,*.sass set filetype=sass
 au! Syntax sass source ~/.vim/syntax/sass.vim
