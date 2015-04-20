@@ -33,40 +33,8 @@ nnoremap <F5> :GundoToggle<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Syntax Files
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-au BufRead,BufNewFile *.htm,*.html set filetype=html
-au! Syntax html source ~/.vim/syntax/html.vim
-
-au BufRead,BufNewFile *.php,*.php set filetype=php
-au! Syntax php source ~/.vim/syntax/php.vim
-
-au BufRead,BufNewFile *.twig set filetype=twig
-au! Syntax twig source ~/.vim/syntax/twig.vim
-
-au BufRead,BufNewFile *.sass,*.sass set filetype=sass
-au! Syntax sass source ~/.vim/syntax/sass.vim
-
-au BufRead,BufNewFile *.scss,*.scss set filetype=scss
-au! Syntax scss source ~/.vim/syntax/scss.vim
-
-au BufRead,BufNewFile *.haml,*.haml set filetype=haml
-au! Syntax haml source ~/.vim/syntax/haml.vim
-
-au BufRead,BufNewFile *.jade,*.jade set filetype=jade
-au! Syntax jade source ~/.vim/syntax/jade.vim
-
-au BufRead,BufNewFile *.blade.php,*.blade.php set filetype=blade
-au! Syntax jade source ~/.vim/bundles/vim-blade/syntax/blade.vim
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-nmap <leader>s <Plug>(wildfire-quick-select)
 
 "
 " Pathogen
@@ -137,6 +105,39 @@ set tags=~/.vim/tags/laravel
 let g:user_zen_expandabbr_key = '<c-e>'
 let g:use_zen_complete_tag = 1
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Syntax Files
+"
+" IMPORTANT: this section should come after Pathogen because
+"            there are file types that rely on multiple syntax
+"            plugins that will get overriden otherwise.
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+au BufRead,BufNewFile *.htm,*.html set filetype=html
+au! Syntax html source ~/.vim/syntax/html.vim
+
+au BufRead,BufNewFile *.php set filetype=php
+au! Syntax php source ~/.vim/syntax/php.vim
+
+au BufRead,BufNewFile *.twig set filetype=html.twig
+"au! Syntax twig source ~/.vim/syntax/twig.vim
+
+au BufRead,BufNewFile *.sass,*.sass set filetype=sass
+au! Syntax sass source ~/.vim/syntax/sass.vim
+
+au BufRead,BufNewFile *.scss,*.scss set filetype=scss
+au! Syntax scss source ~/.vim/syntax/scss.vim
+
+au BufRead,BufNewFile *.haml,*.haml set filetype=haml
+au! Syntax haml source ~/.vim/syntax/haml.vim
+
+au BufRead,BufNewFile *.jade,*.jade set filetype=jade
+au! Syntax jade source ~/.vim/syntax/jade.vim
+
+au BufRead,BufNewFile *.blade.php,*.blade.php set filetype=blade
+au! Syntax blade source ~/.vim/bundles/vim-blade/syntax/blade.vim
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " VIM user interface
