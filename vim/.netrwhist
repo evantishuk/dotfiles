@@ -1,4 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/home/evan/www/imaginethat.io/app/database/migrations'
 let g:netrw_dirhist_2='/home/evan/.themes/Zukitwo/gtk-3.0'
+let g:netrw_dirhist_3='/home/etishuk/public_html/scha/sites/all/themes/scha2/css'
+let g:netrw_dirhist_4='/home/etishuk/public_html/scha/sites/all/themes/bootstrap/scha'
+let g:netrw_dirhist_5='/home/etishuk/public_html/scha/sites/all/themes/bootstrap/scha_bootstrap/templates'
+let g:netrw_dirhist_6='/home/etishuk/public_html/scha/sites/all/themes/bootstrap/scha_bootstrap/less'
+let g:netrw_dirhist_7='/home/etishuk/public_html/scha/sites/all/themes/bootstrap/scha_bootstrap/templates'
+let g:netrw_dirhist_8='/home/etishuk/public_html/sjmp-books-new/sites/all/themes/SJMP-bartik/sass'

@@ -1,3 +1,7 @@
+red=`tput setaf 1`
+green=`tput setaf 2`
+reset=`tput sgr0`
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -69,23 +73,24 @@ esac
 
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
+    echo "${green}Enabling dircolors for ls and grep.${reset}"
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls -la --color=auto'
-	#alias ls='ls -l --color=auto | awk '"'"'{k=0;for(i=0;i<=8;i++)k+=((substr($1,i+2,1)~/[rwx]/) \
-	#*2^(8-i));if(k)printf("%0o ",k);print}'"'"''
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
-
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
 
-gconftool-2 --set "/apps/gnome-terminal/profiles/Default/use_theme_background" --type bool false
-gconftool-2 --set "/apps/gnome-terminal/profiles/Default/use_theme_colors" --type bool false
-gconftool-2 --set "/apps/gnome-terminal/profiles/Default/palette" --type string "#070736364242:#D3D301010202:#858599990000:#B5B589890000:#26268B8BD2D2:#D3D336368282:#2A2AA1A19898:#EEEEE8E8D5D5:#00002B2B3636:#CBCB4B4B1616:#58586E6E7575:#65657B7B8383:#838394949696:#6C6C7171C4C4:#9393A1A1A1A1:#FDFDF6F6E3E3"
-gconftool-2 --set "/apps/gnome-terminal/profiles/Default/background_color" --type string "#00002B2B3636"
-gconftool-2 --set "/apps/gnome-terminal/profiles/Default/foreground_color" --type string "#838394949696"
+# Do some terminal color settings if gconftool is installed
+if ! type -p "gconftool-2" > /dev/null; then
+    echo "${red}No gconftool installed. That's OK, I guess (it's not OK).${reset}"
+else
+    gconftool-2 --set "/apps/gnome-terminal/profiles/Default/use_theme_background" --type bool false
+    gconftool-2 --set "/apps/gnome-terminal/profiles/Default/use_theme_colors" --type bool false
+    gconftool-2 --set "/apps/gnome-terminal/profiles/Default/palette" --type string "#070736364242:#D3D301010202:#858599990000:#B5B589890000:#26268B8BD2D2:#D3D336368282:#2A2AA1A19898:#EEEEE8E8D5D5:#00002B2B3636:#CBCB4B4B1616:#58586E6E7575:#65657B7B8383:#838394949696:#6C6C7171C4C4:#9393A1A1A1A1:#FDFDF6F6E3E3"
+    gconftool-2 --set "/apps/gnome-terminal/profiles/Default/background_color" --type string "#00002B2B3636"
+    gconftool-2 --set "/apps/gnome-terminal/profiles/Default/foreground_color" --type string "#838394949696"
+fi
 
 # some more ls aliases
 alias ll='ls -alF'
