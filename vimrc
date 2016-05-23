@@ -68,20 +68,20 @@ let g:airline#extensions#tabline#tab_min_count = 0
 let g:airline#extensions#tabline#fnamemod = ':t'
 
 " define buffer tab separator characters
-let g:airline#extensions#tabline#left_sep = '⮀'
-let g:airline#extensions#tabline#left_alt_sep = '⮁'
-let g:airline#extensions#tabline#right_sep = '⮂'
-let g:airline#extensions#tabline#right_alt_sep = '⮃'
+"let g:airline#extensions#tabline#left_sep = '⮀'
+"let g:airline#extensions#tabline#left_alt_sep = '⮁'
+"let g:airline#extensions#tabline#right_sep = '⮂'
+"let g:airline#extensions#tabline#right_alt_sep = '⮃'
 
 " Set airline symbols
-let g:airline_symbols = {}
-let g:airline_left_sep = '⮀'
-let g:airline_left_alt_sep = '⮁'
-let g:airline_right_sep = '⮂'
-let g:airline_right_alt_sep = '⮃'
-let g:airline_symbols.branch = '⭠'
-let g:airline_symbols.readonly = '⭤'
-let g:airline_symbols.linenr = '⭡'
+"let g:airline_symbols = {}
+"let g:airline_left_sep = '⮀'
+"let g:airline_left_alt_sep = '⮁'
+"let g:airline_right_sep = '⮂'
+"let g:airline_right_alt_sep = '⮃'
+"let g:airline_symbols.branch = '⭠'
+"let g:airline_symbols.readonly = '⭤'
+"let g:airline_symbols.linenr = '⭡'
 
 "
 " Tagbar
@@ -104,6 +104,12 @@ set tags=~/.vim/tags/laravel
 "
 let g:user_zen_expandabbr_key = '<c-e>'
 let g:use_zen_complete_tag = 1
+
+"
+" PHP Documentor for VIM (PDV)
+"
+let pdv_template_dir = $HOME ."/.vim/templates"
+nnoremap <buffer> <C-p> :call pdv#DocumentWithSnip()<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -294,3 +300,12 @@ while c <= 'z'
   let c = nr2char(1+char2nr(c))
 endw
 set timeout ttimeoutlen=50
+
+" Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
+" Powerline setup
+set laststatus=2
+set term=xterm-256color
+set termencoding=utf-8
+set guifont=Ubuntu\ Mono\ derivative\ Powerline\ Regular:12
+" set guifont=Ubuntu\ Mono
+let g:Powerline_symbols = 'fancy'

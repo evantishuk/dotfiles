@@ -46,3 +46,9 @@
 [submodule "vim/bundle/vim-twig"]
 	path = vim/bundle/vim-twig
 	url = https://github.com/beyondwords/vim-twig
+[submodule "vim/bundle/vmustache"]
+	path = vim/bundle/vmustache
+	url = https://github.com/tobyS/vmustache.git
+[submodule "vim/bundle/pdv"]
+	path = vim/bundle/pdv
+	url = https://github.com/tobyS/pdv.git
