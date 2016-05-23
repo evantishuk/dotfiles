@@ -109,7 +109,7 @@ let g:use_zen_complete_tag = 1
 " PHP Documentor for VIM (PDV)
 "
 let pdv_template_dir = $HOME ."/.vim/templates"
-nnoremap <buffer> <C-p> :call pdv#DocumentWithSnip()<CR>
+nnoremap <buffer> <C-p> :call pdv#DocumentCurrentLine()<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
