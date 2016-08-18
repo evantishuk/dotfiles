@@ -108,7 +108,7 @@ let g:use_zen_complete_tag = 1
 "
 " PHP Documentor for VIM (PDV)
 "
-let pdv_template_dir = $HOME ."/.vim/templates"
+let pdv_template_dir = $HOME ."/dotfiles/vim/templates"
 nnoremap <buffer> <C-p> :call pdv#DocumentCurrentLine()<CR>
 
 
@@ -149,10 +149,10 @@ au! Syntax blade source ~/.vim/bundles/vim-blade/syntax/blade.vim
 " VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" spaces instead of tabs. Prefer 2 spaces
-set softtabstop=2
-set tabstop=2
-set shiftwidth=2
+" spaces instead of tabs. Prefer 4 spaces
+set softtabstop=4
+set tabstop=4
+set shiftwidth=4
 set expandtab
 
 " cursor style in insert mode
